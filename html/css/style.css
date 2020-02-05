@@ -1,8 +1,12 @@
 img {
 	width: 100%;
-	max-width: 1000px;
+	/* max-width: 1000px; */
 }
 body, html {
 	margin: 0;
 	padding: 0;
+}
+
+#images {
+	display: none;
 }
