@@ -10,10 +10,15 @@
 <body>
 	<div>
 		<ul id="images">
-			<li><img src="img/output-0.png" alt="Picture 1"></li>
-			<li><img src="img/output-1.png" alt="Picture 2"></li>
-			<li><img src="img/output-2.png" alt="Picture 3"></li>
-			<li><img src="img/output-3.png" alt="Picture 4"></li>
+			<li><img src="img/output-0.png" alt="Side 1"></li>
+			<li><img src="img/output-1.png" alt="Side 2"></li>
+			<li><img src="img/output-2.png" alt="Side 3"></li>
+			<li><img src="img/output-3.png" alt="Side 4"></li>
+			<li><img src="img/output-4.png" alt="Side 5"></li>
+			<li><img src="img/output-5.png" alt="Side 6"></li>
+			<li><img src="img/output-6.png" alt="Side 7"></li>
+			<li><img src="img/output-7.png" alt="Side 8"></li>
+			<li><img src="img/output-8.png" alt="Side 9"></li>
 		</ul>
 	</div>
 
@@ -23,7 +28,8 @@
 		// View a list of images
 		const gallery = new Viewer(document.getElementById('images'), {
 			button: false,
-			backdrop: 'static'
+			backdrop: 'static',
+			loading: false
 		});
 		gallery.show();
 	</script>
