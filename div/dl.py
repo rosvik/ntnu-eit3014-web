@@ -1,4 +1,3 @@
-import webbrowser
 import requests
 import os
 from datetime import date
