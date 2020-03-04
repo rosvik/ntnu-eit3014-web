@@ -1,5 +1,6 @@
 import webbrowser
 import requests
+import os
 from datetime import date
 
 urls = [
@@ -324,3 +325,5 @@ if loc:
 	url = 'https://www.nb.no/nbsok/content/pdf?urn=URN:NBN:no-nb_digavis_trondhjemsadresseavis_null_null_'+ loc +'&resolutionlevel=6'
 	myfile = requests.get(url)
 	open('avis.pdf', 'wb').write(myfile.content)
+	os.system('rm ../html/img/output-*.png')
+	os.system('convert -density 150 avis.pdf -quality 20 ../html/img/output.jpg')
