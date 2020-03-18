@@ -322,8 +322,17 @@ loc = dages()
 
 if loc:
 	url = 'https://www.nb.no/nbsok/content/pdf?urn=URN:NBN:no-nb_digavis_trondhjemsadresseavis_null_null_'+ loc +'&resolutionlevel=6'
+
+	print("Downloading todays PDF from " + url)
 	myfile = requests.get(url)
+
 	open('avis.pdf', 'wb').write(myfile.content)
+
+	print("Deleting old image files")
 	os.system('rm ../html/img/output-*.jpg')
+
+	print("Generatng new image files")
 	os.system('convert -density 150 avis.pdf -quality 20 ../html/img/output.jpg')
+
+	print("Cleaning up")
 	os.system('rm avis.pdf')
