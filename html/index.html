@@ -34,7 +34,19 @@
 	<script src="viewerjs/dist/viewer.min.js"></script>
 
 	<script>
-		// View a list of images
+
+		// In order to bypass caching of images each day, the date is appended 
+		// as a parameter to the URL to every image. 
+		const d = new Date();	// E.g. "WedMar182020"
+		const datestring = d.toDateString().replaceAll(" ", "");
+		const listItems = document.getElementById('images').children;
+		for (let i = 0; i < listItems.length; i++) {
+			const imgElement = listItems[i].children[0]
+			imgElement.setAttribute('src', imgElement.getAttribute('src') + "?f=" + datestring)
+		}
+
+		// Create the gallery based on every image in #images
+		// https://github.com/fengyuanchen/viewerjs
 		const gallery = new Viewer(document.getElementById('images'), {
 			button: false,
 			backdrop: 'static',
