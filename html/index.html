@@ -54,12 +54,26 @@
 		const gallery = new Viewer(document.getElementById('images'), {
 			button: false,
 			backdrop: 'static',
-			loading: false
+			loading: false,
+			rotatable: false,
+			scalable: false,
 			viewed() {
 				// All methods are available here except "show".
 				let title = "<a target='_blank' href='https://www.nb.no/search?mediatype=aviser&series=%22Adresseavisen%22&fromDate=19200101&toDate=19201231'>Trondhjems Adresseavis</a> fra Nasjonalbiblioteket / <a target='_blank' href='https://creativecommons.org/licenses/by-nd/2.0/'>CC BY ND</a>"
 				document.getElementsByClassName('viewer-title')[0].innerHTML = title;
 			},
+			toolbar: {
+				zoomIn: 2,
+				zoomOut: 2,
+				prev: 1,
+				play: {
+					show: 1,
+					size: 'large',
+				},
+				next: 1,
+				oneToOne: 2,
+				reset: 2,
+			  },
 		});
 		gallery.show();
 	</script>
