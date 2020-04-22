@@ -1,10 +1,25 @@
 body {
-	background-image: url('../img/tekstur2.jpg');
+	margin-top: 100px;
+	margin-bottom: 100px;
 }
 
-p, span, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, q {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizelegibility;
 	font-family: 'TravelingTypewriter';
+}
+
+#header {
+	filter: invert(100%);
+	margin: auto; 
+	display: block;
+}
+
+q {
+	text-indent: 1em;
+}
+
+img {
+	margin: 25px 0 5px 0;
 }
