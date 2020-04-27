@@ -1,0 +1,3 @@
+# m h dom mon dow command
+  0 0 *   *   *   cd /var/www/gamlenyheter.media/div && python3.7 dl.py
+
